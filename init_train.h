@@ -48,7 +48,7 @@ struct model
 	//multi-class SVM implementation
 	//***************************************************//
 	int num_class;
-	double alphaVector_class; //num_class x n
+	double**alphaVector_class; //num_class x n
 	double**weight_class; //num_class x d matrix
 	//***************************************************//
 };

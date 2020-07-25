@@ -36,7 +36,14 @@ void loadData(char*dataFileName, model& our_model)
 	//multi-class SVM
 	if (our_model.num_class > 2)
 	{
-		//code here
+		our_model.alphaVector_class = new double*[our_model.num_class];
+		our_model.weight_class = new double*[our_model.num_class];
+
+		for (int c = 0; c < our_model.num_class; c++)
+		{
+			our_model.alphaVector_class[c] = new double[our_model.n];
+			our_model.weight_class[c] = new double[our_model.dim];
+		}
 	}
 
 	dataFile.close();
